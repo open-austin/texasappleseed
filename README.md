@@ -1,4 +1,4 @@
-# Texas Apple Seed 
+# Texas Appleseed 
 
 See https://github.com/open-austin/project-ideas/issues/14
 
