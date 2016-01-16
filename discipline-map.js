@@ -6,8 +6,7 @@ window.onload = function() {
 
   cartodb.createVis(map, visUrl)
     .on('done', function(vis, layers) {
-      for (var i = 0, len = layers[1].layers.length; i < len; i++) {
-        var layer = layers[1].layers[i];
+      $.each(layers[1].layers, function(idx, layer) {
         toggleLayers[layer.layer_name] = layer;
 
         var element = $('<a>')
@@ -24,18 +23,16 @@ window.onload = function() {
 
         if (linkedName !== '' && toggleLayers.hasOwnProperty(linkedName)) {
           setLayer(linkedName);
-        } else if (i === 0) {
+        } else if (idx === 0) {
           setLayer(layer.layer_name);
         }
-      };
+      });
     });
 
   function setLayer(layerName) {
-    var keys = Object.keys(toggleLayers);
-    for (var i = 0, len = keys.length; i < len; i++) {
-      var key = keys[i];
-      toggleLayers[key].sub.hide();
-    }
+    $.each(toggleLayers, function(name, layer) {
+      layer.sub.hide();
+    });
 
     toggleLayers[layerName].sub.show();
 
