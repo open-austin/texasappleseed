@@ -7,7 +7,7 @@ window.onload = function() {
   cartodb.createVis(map, visUrl)
     .on('done', function(vis, layers) {
       for (var i = 0, len = layers[1].layers.length; i < len; i++) {
-        layer = layers[1].layers[i];
+        var layer = layers[1].layers[i];
         toggleLayers[layer.layer_name] = layer;
 
         var element = $('<a>')
@@ -31,9 +31,11 @@ window.onload = function() {
     });
 
   function setLayer(layerName) {
-    Object.keys(toggleLayers).forEach(function(key) {
+    var keys = Object.keys(toggleLayers);
+    for (var i = 0, len = keys.length; i < len; i++) {
+      var key = keys[i];
       toggleLayers[key].sub.hide();
-    })
+    }
 
     toggleLayers[layerName].sub.show();
 
