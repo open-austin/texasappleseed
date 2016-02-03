@@ -17,4 +17,4 @@ ratioDistrict.csv contains some data about disparities in punishments for variou
 
     ratio (ECO. DISADV.|SPEC. ED.|BLACK OR AFRICAN AMERICAN|HISPANIC/LATINO|WHITE|AMERICAN INDIAN OR ALASKA NAT|ASIAN|NATIVE HAWAIIAN/OTHER PACIFIC|TWO OR MORE RACES) (EXPULSION ACTIONS|IN SCHOOL SUSPENSIONS|OUT OF SCHOOL SUSPENSIONS|DAEP PLACEMENTS) vs average
 
-That means the map will need 36 settings (9 groups times 4 punishments) to show all the data we want to display.
+That means the map will need 36 settings (9 groups times 4 punishments) to show all the data we want to display. Here's [the Gist of the process](https://gist.github.com/mscarey/bdec4603313dd81da530) used to make ratioDistrict.csv.
