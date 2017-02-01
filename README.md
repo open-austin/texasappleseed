@@ -1,8 +1,8 @@
 # Texas Appleseed 
 
-See https://github.com/open-austin/project-ideas/issues/14
+This project orginated from [this proposal](https://github.com/open-austin/project-ideas/issues/14). 
+Now the mapping component of this project lives at https://github.com/txappleseed/txappleseedmap
 
-**Development in progress.**
 #### License
 
 Released to the public domain under [the Unlicense](http://unlicense.org/) by Open Austin, 2015.
